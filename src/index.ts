@@ -24,7 +24,7 @@ mongoose.connect(`${process.env.START_MONGODB}${process.env.MONGODB_USERNAME}:${
 
 // Middleware
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:3000", credentials: true }))
+app.use(cors({ origin: "https://stirring-mooncake-f0cdcf.netlify.app", credentials: true }))
 
 app.set("trust proxy", 1);
 
@@ -153,34 +153,34 @@ passport.use(new GitHubStrategy({
 app.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
 
 app.get('/auth/google/callback',
-  // passport.authenticate('google', { failureRedirect: 'https://gallant-hodgkin-fb9c52.netlify.app', session: true }),
-  passport.authenticate('google', { failureRedirect: '/login' }),
+  passport.authenticate('google', { failureRedirect: 'https://stirring-mooncake-f0cdcf.netlify.app', session: true }),
+  // passport.authenticate('google', { failureRedirect: '/login' }),
   function (req, res) {
     // Successful authentication, redirect home.
-    // res.redirect('https://gallant-hodgkin-fb9c52.netlify.app');
-    res.redirect('http://localhost:3000');
+    res.redirect('https://stirring-mooncake-f0cdcf.netlify.app');
+    // res.redirect('http://localhost:3000');
   });
 
 
 app.get('/auth/twitter', passport.authenticate('twitter'));
 
 app.get('/auth/twitter/callback',
-  // passport.authenticate('twitter', { failureRedirect: 'https://gallant-hodgkin-fb9c52.netlify.app', session: true }),
-  passport.authenticate('twitter', { failureRedirect: '/login' }),
+  passport.authenticate('twitter', { failureRedirect: 'https://stirring-mooncake-f0cdcf.netlify.app', session: true }),
+  // passport.authenticate('twitter', { failureRedirect: '/login' }),
   function (req, res) {
-    // res.redirect('https://gallant-hodgkin-fb9c52.netlify.app');
-    res.redirect('http://localhost:3000');
+    res.redirect('https://stirring-mooncake-f0cdcf.netlify.app');
+    // res.redirect('http://localhost:3000');
   });
 
 
 app.get('/auth/github', passport.authenticate('github'));
 
 app.get('/auth/github/callback',
-  // passport.authenticate('github', { failureRedirect: 'https://gallant-hodgkin-fb9c52.netlify.app', session: true }),
-  passport.authenticate('github', { failureRedirect: '/login' }),
+  passport.authenticate('github', { failureRedirect: 'https://stirring-mooncake-f0cdcf.netlify.app', session: true }),
+  // passport.authenticate('github', { failureRedirect: '/login' }),
   function (req, res) {
-    // res.redirect('https://gallant-hodgkin-fb9c52.netlify.app');
-    res.redirect('http://localhost:3000');
+    res.redirect('https://stirring-mooncake-f0cdcf.netlify.app');
+    // res.redirect('http://localhost:3000');
   });
 
 
