@@ -200,10 +200,6 @@ app.get("/auth/logout", (req, res) => {
   }
 })
 
-// app.listen(process.env.PORT || 4000, () => {
-//   console.log("Server Starrted");
-// })
-
-app.listen(4000, () => {
-  console.log("Server Started");
+app.listen(process.env.PORT || 4000, () => {
+  console.log("Server Starrted");
 })
