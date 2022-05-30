@@ -78,9 +78,9 @@ passport.use(new GoogleStrategy({
         });
 
         await newUser.save();
-        cb(null, newUser);
+        return cb(null, newUser);
       }
-      cb(null, doc);
+      return cb(null, doc);
     })
 
   }));
@@ -107,9 +107,9 @@ passport.use(new TwitterStrategy({
         });
 
         await newUser.save();
-        cb(null, newUser);
+        return cb(null, newUser);
       }
-      cb(null, doc);
+      return cb(null, doc);
     })
 
   }
