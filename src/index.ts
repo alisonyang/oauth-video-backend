@@ -139,9 +139,9 @@ passport.use(new GitHubStrategy({
         });
 
         await newUser.save();
-        cb(null, newUser);
+        return cb(null, newUser);
       }
-      cb(null, doc);
+      return cb(null, doc);
     })
 
   }
