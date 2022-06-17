@@ -13,5 +13,7 @@
         "moduleResolution": "node",
         "rootDir": "src",
         "noImplicitAny": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
     },
 }
